@@ -9,7 +9,12 @@ datetime.datetime(2007, 1, 25, 12, 0, tzinfo=<iso8601.iso8601.Utc ...>)
 """
 
 from datetime import datetime, timedelta, tzinfo
-import re
+
+# If re2 is installed use it, instead of re
+try:
+  import re2 as re
+except ImportError:
+  import re
 
 __all__ = ["parse_date", "ParseError"]
 
