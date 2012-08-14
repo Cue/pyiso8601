@@ -16,6 +16,13 @@ datetime.datetime(2007, 1, 25, 12, 0, tzinfo=<iso8601.iso8601.Utc ...>)
 Changes
 =======
 
+0.1.5
+-----
+
+* Handle timezones in formats hhmm and hh. Previously only handled hh format
+* Add function isTimezoneLessEvent to return if a datestring has no timezone associated with it
+
+
 0.1.4
 -----
 
@@ -47,7 +54,7 @@ Changes
 
 setup(
     name="iso8601",
-    version="0.1.4",
+    version="0.1.5",
     description=LONG_DESCRIPTION.split("\n")[0],
     long_description=LONG_DESCRIPTION,
     author="Michael Twomey",
