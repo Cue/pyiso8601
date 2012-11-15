@@ -206,3 +206,9 @@ class ISO8601(unittest.TestCase):
     """Tests the timezoneless event feature."""
     self.assertEquals(iso8601.isTimezoneLessEvent('2012-07-04T19:00:00-0700'), False)
     self.assertEquals(iso8601.isTimezoneLessEvent('2012-07-04T19:00:00'), True)
+
+
+  def testParseDateLongYear(self):
+    """Tests parsing of date for years with more than 4 digits."""
+    d = iso8601.parseDate("42557-01-27T08:00:00")
+    self.assertEquals(d.year, 9999)
